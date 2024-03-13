@@ -12,6 +12,8 @@
 		6C361C022BA0C446002A187B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C361C012BA0C446002A187B /* Assets.xcassets */; };
 		6C361C052BA0C446002A187B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C361C042BA0C446002A187B /* Preview Assets.xcassets */; };
 		6C361C162BA0C520002A187B /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C361C152BA0C520002A187B /* MainTabView.swift */; };
+		6CA6920D2BA20E7A0048DEED /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA6920C2BA20E7A0048DEED /* CardView.swift */; };
+		6CA692102BA2106F0048DEED /* UserInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA6920F2BA2106F0048DEED /* UserInfoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,8 @@
 		6C361C012BA0C446002A187B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6C361C042BA0C446002A187B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6C361C152BA0C520002A187B /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		6CA6920C2BA20E7A0048DEED /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		6CA6920F2BA2106F0048DEED /* UserInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +129,7 @@
 		6C361C112BA0C4ED002A187B /* Cards */ = {
 			isa = PBXGroup;
 			children = (
+				6CA6920E2BA20E7F0048DEED /* Views */,
 			);
 			path = Cards;
 			sourceTree = "<group>";
@@ -148,6 +153,15 @@
 			children = (
 			);
 			path = Messaging;
+			sourceTree = "<group>";
+		};
+		6CA6920E2BA20E7F0048DEED /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6CA6920C2BA20E7A0048DEED /* CardView.swift */,
+				6CA6920F2BA2106F0048DEED /* UserInfoView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,7 +236,9 @@
 			files = (
 				6C361C162BA0C520002A187B /* MainTabView.swift in Sources */,
 				6C361C002BA0C442002A187B /* ContentView.swift in Sources */,
+				6CA6920D2BA20E7A0048DEED /* CardView.swift in Sources */,
 				6C361BFE2BA0C442002A187B /* TinderCloneApp.swift in Sources */,
+				6CA692102BA2106F0048DEED /* UserInfoView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
