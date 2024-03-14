@@ -16,6 +16,8 @@ struct CardView: View {
     "ilse",
     "ilse2",
     "ilse3",
+    "ilse4",
+    "ilse5",
     ]
     
     var body: some View {
@@ -29,6 +31,8 @@ struct CardView: View {
                     .overlay {
                         ImageScrollingOverlay(currentImageIndex: $currentImageIndex, imageCount: mockImages.count)
                     }
+                
+                CardImageIndicatorView(currentImageIndex: currentImageIndex, imageCount: mockImages.count)
                 
                 SwipeActionIndicatorView(xOffset: $xOffset)
             }
