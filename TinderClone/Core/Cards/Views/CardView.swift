@@ -43,7 +43,7 @@ struct CardView: View {
                 .padding(.horizontal, 10)
                 
         }
-        .shadow(radius: 8)
+        .shadow(radius: 6)
         .offset(x: xOffset)
         .rotationEffect(.degrees(degrees))
         .animation(.snappy, value: xOffset)
@@ -53,6 +53,23 @@ struct CardView: View {
             .onEnded(onDragEnded)
         )
         
+    }
+}
+
+private extension CardView {
+    func returnToCenter() {
+        xOffset = 0
+        degrees = 0
+    }
+    
+    func swipeRight() {
+        xOffset = 500
+        degrees = 12
+    }
+    
+    func swipeLeft() {
+        xOffset = -500
+        degrees = -12
     }
 }
 
@@ -67,8 +84,14 @@ private extension CardView {
         let width = value.translation.width
         
         if abs(width) <=  abs(SizeConstants.screenCutoff) {
-            xOffset = 0
-            degrees = 0
+            returnToCenter()
+            return
+        }
+        
+        if width >= SizeConstants.screenCutoff {
+            swipeRight()
+        } else {
+            swipeLeft()
         }
     }
 }
