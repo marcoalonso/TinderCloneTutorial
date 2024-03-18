@@ -9,8 +9,9 @@ import SwiftUI
 
 struct MainTabView: View {
     var body: some View {
+        let model: CardModel = CardModel(user: MockData.users[0])
         TabView {
-            CardView()
+            CardView(model: model)
                 .tabItem { Image(systemName: "flame") }
                 .tag(0)
             
