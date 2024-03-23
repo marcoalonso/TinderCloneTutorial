@@ -13,8 +13,12 @@ struct CardStackView: View {
     var body: some View {
         ZStack {
             ForEach(viewModel.cardModels) { card in
-                CardView(model: card)
+                CardView(viewModel: viewModel, model: card)
             }
+        }
+        .onChange(of: viewModel.cardModels) { oldValue, newValue in
+            print("Debug: oldValue \(oldValue.count)")
+            print("Debug: newValue \(newValue.count)")
         }
     }
 }

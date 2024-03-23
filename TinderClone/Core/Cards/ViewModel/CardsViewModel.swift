@@ -7,6 +7,7 @@
 
 import Foundation
 
+@MainActor
 class CardsViewModel: ObservableObject {
     @Published var cardModels = [CardModel]()
     
@@ -23,5 +24,11 @@ class CardsViewModel: ObservableObject {
         } catch {
             print("Debug: error \(error.localizedDescription)")
         }
+    }
+    
+    func removeCard(_ card: CardModel) {
+        guard let index = cardModels.firstIndex(where: { $0.id == card.id }) else { return }
+        print("Debug: index \(index)")
+        cardModels.remove(at: index)
     }
 }
