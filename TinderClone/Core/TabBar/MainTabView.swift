@@ -22,7 +22,7 @@ struct MainTabView: View {
                 .tabItem { Image(systemName: "bubble") }
                 .tag(2)
             
-            CurrentUserProfileView(user: MockData.users[0])
+            CurrentUserProfileView(user: MockData.users[4])
                 .tabItem { Image(systemName: "person") }
                 .tag(3)
         }

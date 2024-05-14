@@ -47,5 +47,5 @@ struct UserInfoView: View {
 }
 
 #Preview {
-    UserInfoView(showProfileModal: .constant(false), user: MockData.users[3])
+    UserInfoView(showProfileModal: .constant(false), user: MockData.users[4])
 }

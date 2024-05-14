@@ -47,5 +47,5 @@ struct CurrentUserProfileHeaderView: View {
 }
 
 #Preview {
-    CurrentUserProfileHeaderView(user: MockData.users[0])
+    CurrentUserProfileHeaderView(user: MockData.users[4])
 }

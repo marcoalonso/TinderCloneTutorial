@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct CurrentUserProfileView: View {
+    @State private var showEditProfile = false
     let user: User
     
     var body: some View {
@@ -15,6 +16,7 @@ struct CurrentUserProfileView: View {
             List {
                 // header
                 CurrentUserProfileHeaderView(user: user)
+                    .onTapGesture { showEditProfile.toggle() }
                 
                 // account info view
                 Section("Account information") {
@@ -65,10 +67,15 @@ struct CurrentUserProfileView: View {
                 }
 
             }
+            .navigationTitle("Profile")
+            .navigationBarTitleDisplayMode(.inline)
+            .fullScreenCover(isPresented: $showEditProfile) {
+                EditProfileView(user: user)
+            }
         }
     }
 }
 
 #Preview {
-    CurrentUserProfileView(user: MockData.users[0])
+    CurrentUserProfileView(user: MockData.users[4])
 }

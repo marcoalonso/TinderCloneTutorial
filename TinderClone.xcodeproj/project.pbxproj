@@ -29,6 +29,11 @@
 		6CA692102BA2106F0048DEED /* UserInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA6920F2BA2106F0048DEED /* UserInfoView.swift */; };
 		6CFA37502BF3AF93000DCCC2 /* CurrentUserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CFA374F2BF3AF93000DCCC2 /* CurrentUserProfileView.swift */; };
 		6CFA37522BF3AFD1000DCCC2 /* CurrentUserProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CFA37512BF3AFD1000DCCC2 /* CurrentUserProfileHeaderView.swift */; };
+		6CFA37552BF3B7EE000DCCC2 /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CFA37542BF3B7EE000DCCC2 /* EditProfileView.swift */; };
+		6CFA37572BF3B932000DCCC2 /* ProfileImageGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CFA37562BF3B932000DCCC2 /* ProfileImageGridView.swift */; };
+		6CFA37592BF3BF8B000DCCC2 /* GenderSelectionSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CFA37582BF3BF8B000DCCC2 /* GenderSelectionSheet.swift */; };
+		6CFA375C2BF3C05A000DCCC2 /* GenderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CFA375B2BF3C05A000DCCC2 /* GenderModel.swift */; };
+		6CFA375E2BF3C67C000DCCC2 /* OrientationSexualSelectionSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CFA375D2BF3C67C000DCCC2 /* OrientationSexualSelectionSheet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +60,11 @@
 		6CA6920F2BA2106F0048DEED /* UserInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoView.swift; sourceTree = "<group>"; };
 		6CFA374F2BF3AF93000DCCC2 /* CurrentUserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserProfileView.swift; sourceTree = "<group>"; };
 		6CFA37512BF3AFD1000DCCC2 /* CurrentUserProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserProfileHeaderView.swift; sourceTree = "<group>"; };
+		6CFA37542BF3B7EE000DCCC2 /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
+		6CFA37562BF3B932000DCCC2 /* ProfileImageGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageGridView.swift; sourceTree = "<group>"; };
+		6CFA37582BF3BF8B000DCCC2 /* GenderSelectionSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderSelectionSheet.swift; sourceTree = "<group>"; };
+		6CFA375B2BF3C05A000DCCC2 /* GenderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderModel.swift; sourceTree = "<group>"; };
+		6CFA375D2BF3C67C000DCCC2 /* OrientationSexualSelectionSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrientationSexualSelectionSheet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -230,6 +240,8 @@
 		6C361C122BA0C4F3002A187B /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				6CFA375A2BF3C00B000DCCC2 /* Model */,
+				6CFA37532BF3B7D0000DCCC2 /* EditProfile */,
 				6CFA374E2BF3AF7F000DCCC2 /* CurrentUserProfile */,
 				6C58CF1A2BBB4CB40074D819 /* UserProfileView.swift */,
 			);
@@ -271,6 +283,25 @@
 				6CFA37512BF3AFD1000DCCC2 /* CurrentUserProfileHeaderView.swift */,
 			);
 			path = CurrentUserProfile;
+			sourceTree = "<group>";
+		};
+		6CFA37532BF3B7D0000DCCC2 /* EditProfile */ = {
+			isa = PBXGroup;
+			children = (
+				6CFA37542BF3B7EE000DCCC2 /* EditProfileView.swift */,
+				6CFA37562BF3B932000DCCC2 /* ProfileImageGridView.swift */,
+				6CFA37582BF3BF8B000DCCC2 /* GenderSelectionSheet.swift */,
+				6CFA375D2BF3C67C000DCCC2 /* OrientationSexualSelectionSheet.swift */,
+			);
+			path = EditProfile;
+			sourceTree = "<group>";
+		};
+		6CFA375A2BF3C00B000DCCC2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6CFA375B2BF3C05A000DCCC2 /* GenderModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -343,6 +374,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CFA37552BF3B7EE000DCCC2 /* EditProfileView.swift in Sources */,
+				6CFA375E2BF3C67C000DCCC2 /* OrientationSexualSelectionSheet.swift in Sources */,
 				6C2DC7A22BA357F1000B6E65 /* ImageScrollingOverlay.swift in Sources */,
 				6CFA37502BF3AF93000DCCC2 /* CurrentUserProfileView.swift in Sources */,
 				6C58CF1B2BBB4CB40074D819 /* UserProfileView.swift in Sources */,
@@ -351,13 +384,16 @@
 				6C361C162BA0C520002A187B /* MainTabView.swift in Sources */,
 				6C2DC79D2BA343A1000B6E65 /* SwipeActionIndicatorView.swift in Sources */,
 				6C0DEDEC2BA896C300AA5B5D /* MockData.swift in Sources */,
+				6CFA37592BF3BF8B000DCCC2 /* GenderSelectionSheet.swift in Sources */,
 				6C63F1292BB32C1E005848EF /* SwipeAction.swift in Sources */,
 				6C361C002BA0C442002A187B /* ContentView.swift in Sources */,
 				6C2DC7A42BA3645C000B6E65 /* CardImageIndicatorView.swift in Sources */,
 				6C63F1272BB32AC1005848EF /* SwipeActionButtonsView.swift in Sources */,
 				6C0DEDE32BA8955300AA5B5D /* CardModel.swift in Sources */,
+				6CFA37572BF3B932000DCCC2 /* ProfileImageGridView.swift in Sources */,
 				6C2DC7A62BA3A80E000B6E65 /* CardStackView.swift in Sources */,
 				6CA6920D2BA20E7A0048DEED /* CardView.swift in Sources */,
+				6CFA375C2BF3C05A000DCCC2 /* GenderModel.swift in Sources */,
 				6C2DC79F2BA34868000B6E65 /* SizeConstants.swift in Sources */,
 				6C361BFE2BA0C442002A187B /* TinderCloneApp.swift in Sources */,
 				6C0DEDE62BA8959900AA5B5D /* CardsViewModel.swift in Sources */,
