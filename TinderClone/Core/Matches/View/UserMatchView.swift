@@ -9,6 +9,7 @@ import SwiftUI
 
 struct UserMatchView: View {
     @Binding var show: Bool
+    @EnvironmentObject var matchManager: MatchManager
     
     var body: some View {
         ZStack {
@@ -23,9 +24,11 @@ struct UserMatchView: View {
                         .frame(width: 100)
                         .frame(height: 100)
                     
-                    Text("You and Ilse liked each other.")
-                        .foregroundStyle(.white)
-                        .font(.title2)
+                    if let marchedUser = matchManager.matchedUser {
+                        Text("You and \(marchedUser.fullname) have liked each other.")
+                            .foregroundStyle(.white)
+                            .font(.title2)
+                    }
                     
                 }
                 
@@ -41,21 +44,23 @@ struct UserMatchView: View {
                             .shadow(radius: 4)
                     }
                     
-                    Image(MockData.users[1].profileImageURLs[1])
-                        .resizable()
-                        .scaledToFill()
-                        .frame(width: 150, height: 150)
-                    .clipShape(Circle())
-                    .overlay {
-                        Circle()
-                            .stroke(.white, lineWidth: 2)
-                            .shadow(radius: 4)
+                    if let matchedUser = matchManager.matchedUser {
+                        Image(matchedUser.profileImageURLs[1])
+                            .resizable()
+                            .scaledToFill()
+                            .frame(width: 150, height: 150)
+                        .clipShape(Circle())
+                        .overlay {
+                            Circle()
+                                .stroke(.white, lineWidth: 2)
+                                .shadow(radius: 4)
+                        }
                     }
                 }
                 
                 VStack(spacing: 16.0) {
                     Button("Send Message") {
-                        
+                        show.toggle()
                     }
                     .font(.subheadline)
                     .fontWeight(.semibold)
@@ -65,7 +70,7 @@ struct UserMatchView: View {
                     .clipShape(Capsule())
                     
                     Button("Keep Swiping") {
-                        
+                        show.toggle()
                     }
                     .font(.subheadline)
                     .fontWeight(.semibold)
@@ -88,4 +93,5 @@ struct UserMatchView: View {
 
 #Preview {
     UserMatchView(show: .constant(true))
+        .environmentObject(MatchManager())
 }

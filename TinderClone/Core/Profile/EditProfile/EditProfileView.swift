@@ -110,7 +110,7 @@ struct EditProfileView: View {
                         .presentationDetents([.medium])
                 }
                 
-            }
+            }// scroll
             
             .scrollIndicators(.hidden)
             .navigationTitle("Edit Profile")
